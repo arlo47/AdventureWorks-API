@@ -9,6 +9,7 @@
 
 namespace Aventureworks_Final_2.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,6 +19,7 @@ namespace Aventureworks_Final_2.Models
         public int SalesReasonID { get; set; }
         public System.DateTime ModifiedDate { get; set; }
     
+        [JsonIgnore]
         public virtual SalesOrderHeader SalesOrderHeader { get; set; }
         public virtual SalesReason SalesReason { get; set; }
     }
