@@ -20,7 +20,7 @@ namespace Aventureworks_Final_2.Models
         public decimal SalesQuota { get; set; }
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }
-    
+
         [JsonIgnore]
         public virtual SalesPerson SalesPerson { get; set; }
     }

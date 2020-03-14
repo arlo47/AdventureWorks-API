@@ -21,6 +21,7 @@ namespace Aventureworks_Final_2.Models
     
         [JsonIgnore]
         public virtual SalesOrderHeader SalesOrderHeader { get; set; }
+
         public virtual SalesReason SalesReason { get; set; }
     }
 }
