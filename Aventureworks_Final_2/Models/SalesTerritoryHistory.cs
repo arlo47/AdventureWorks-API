@@ -9,6 +9,7 @@
 
 namespace Aventureworks_Final_2.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -20,8 +21,11 @@ namespace Aventureworks_Final_2.Models
         public Nullable<System.DateTime> EndDate { get; set; }
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }
-    
+
+        [JsonIgnore]
         public virtual SalesPerson SalesPerson { get; set; }
+
+        [JsonIgnore]
         public virtual SalesTerritory SalesTerritory { get; set; }
     }
 }

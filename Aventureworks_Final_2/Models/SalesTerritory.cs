@@ -39,11 +39,9 @@ namespace Aventureworks_Final_2.Models
         public virtual ICollection<SalesOrderHeader> SalesOrderHeaders { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
-        [JsonIgnore]
         public virtual ICollection<SalesPerson> SalesPersons { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
-        [JsonIgnore]
         public virtual ICollection<SalesTerritoryHistory> SalesTerritoryHistories { get; set; }
     }
 }

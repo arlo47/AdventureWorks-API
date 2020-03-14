@@ -33,10 +33,10 @@ namespace Aventureworks_Final_2.Models
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }
 
-        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SalesOrderHeader> SalesOrderHeaders { get; set; }
-       
+
+        [JsonIgnore]
         public virtual SalesTerritory SalesTerritory { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
