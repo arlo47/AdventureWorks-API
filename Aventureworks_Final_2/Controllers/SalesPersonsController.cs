@@ -38,9 +38,10 @@ namespace Aventureworks_Final_2.Controllers
 
         // GET: api/SalesTerritory/5/SalesPersons
         [ResponseType(typeof(SalesPerson))]
-        [Route("api/SalesTerritory/{id}/SalesPersons")]
+        [Route("api/SalesTerritory/{id}/SalesPersons")]         // define routes by attribute
         public async Task<IHttpActionResult> GetSalesPersonByTerritory(int id)
         {
+            // gets SalesPersons by TerritoryID
             List<SalesPerson> persons = await db.SalesPersons
                                         .Where(p => p.TerritoryID == id)
                                         .ToListAsync();

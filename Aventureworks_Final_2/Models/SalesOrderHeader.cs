@@ -49,6 +49,7 @@ namespace Aventureworks_Final_2.Models
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }
 
+        // SalesOrderDetails have their own sub URI
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SalesOrderDetail> SalesOrderDetails { get; set; }

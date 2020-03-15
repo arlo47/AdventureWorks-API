@@ -165,6 +165,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SalesOrderDetailsController.cs" />
     <Compile Include="Controllers\SalesOrderHeadersController.cs" />
+    <Compile Include="Controllers\SalesPersonQuotaHistoriesController.cs" />
     <Compile Include="Controllers\SalesPersonsController.cs" />
     <Compile Include="Controllers\SalesTaxRatesController.cs" />
     <Compile Include="Controllers\SalesTerritoriesController.cs" />
