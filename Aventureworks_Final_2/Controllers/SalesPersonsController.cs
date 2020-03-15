@@ -36,6 +36,22 @@ namespace Aventureworks_Final_2.Controllers
             return Ok(salesPerson);
         }
 
+        // GET: api/SalesTerritory/5/SalesPersons
+        [ResponseType(typeof(SalesPerson))]
+        [Route("api/SalesTerritory/{id}/SalesPersons")]
+        public async Task<IHttpActionResult> GetSalesPersonByTerritory(int id)
+        {
+            List<SalesPerson> persons = await db.SalesPersons
+                                        .Where(p => p.TerritoryID == id)
+                                        .ToListAsync();
+            if (persons == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(persons);
+        }
+
         // PUT: api/SalesPersons/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutSalesPerson(int id, SalesPerson salesPerson)
