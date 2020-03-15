@@ -12,11 +12,18 @@ namespace Aventureworks_Final_2
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "SalesOrderDetail",
+                url: "SalesOrderHeader/{id}/SalesOrderDetail",
+                defaults: new {  controller = "SalesOrderDetail", id = UrlParameter.Optional }
             );
         }
     }
